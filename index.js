@@ -1,6 +1,22 @@
 /* === Imports === */
 
 /* === Firebase Setup === */
+const firebaseConfig = {
+
+    apiKey: "AIzaSyBi8FVXfqJ5GqQ058HQ8gwVjhf35BQjXx0",
+
+    authDomain: "tech-ticketing-app-d0014.firebaseapp.com",
+
+    databaseURL: "https://tech-ticketing-app-d0014-default-rtdb.firebaseio.com",
+
+    projectId: "tech-ticketing-app-d0014",
+
+    storageBucket: "tech-ticketing-app-d0014.firebasestorage.app",
+
+    messagingSenderId: "603043214296",
+
+    appId: "1:603043214296:web:79b5a4aa1e2de615d9b8ad"
+};
 
 /* === UI === */
 
@@ -55,13 +71,24 @@ function showLoggedInView() {
     hideElement(viewLoggedOut)
     showElement(viewLoggedIn)
 }
-
 function showElement(element) {
     element.style.display = "flex"
 }
-
 function hideElement(element) {
     element.style.display = "none"
 }
-
+async function addPostToDB(postBody, user) {
+    try {
+        const docRef = await addDoc(collection(db, "posts"), {
+            body: postBody,
+            uid: user.uid
+        })
+        console.log("Document written with ID: ", docRef.id)
+    } catch (error) {
+        console.error(error.message)
+    }
+ 
+ 
+ }
+ 
 //credit: coursera

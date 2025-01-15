@@ -1,16 +1,16 @@
 :root {
-    --primary-color: #FFDE00;
+    --primary-color: #ff4d4d;
     --primary-light-color: #FFE769;
     --secondary-color: #FFE4BA;
     --secondary-light-color: #FFF6E8;
     --post-color: #62EEA8;
-    --delete-color: #FF9F9F;
+    --delete-color: #ffe6e6;
     --light-color: #FFFEFC;
     --grey-color: #747E79;
     --dark-color: #000000;
 
     --primary-font: 'Cabin', sans-serif;
-    --seconday-font: 'Calistoga', sans-serif;
+    --seconday-font: 'Monaco', sans-serif;
     
     --border-width: 3px;
     --element-border-radius: 5px;
@@ -31,6 +31,8 @@ html, body {
 }
 
 body {
+    position: relative;
+    top: 50px;
     color: var(--dark-color);
     background-color: var(--secondary-light-color);
     font-family: var(--primary-font);
@@ -48,8 +50,13 @@ h2 {
 
 .app-title {
     font-family: var(--seconday-font);
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
+    color:white;
+    background-color:#ce0e0e;
+    border-radius:5px;
+    width:70%;
+    align-self: center;
 }
 
 /* === Sections === */
@@ -193,6 +200,7 @@ button:hover {
 .secondary-btn {
     padding: 0.4em;
     background-color: transparent;
+
 }
 
 .secondary-btn:hover {
