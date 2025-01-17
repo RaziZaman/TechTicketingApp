@@ -1,5 +1,4 @@
 /* === Imports === */
-
 /* === Firebase Setup === */
 const firebaseConfig = {
 
